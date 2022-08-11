@@ -17,7 +17,7 @@ import { loadUsersApi } from "./api";
 export function* onLoadUsersStartAsync() {
   try {
     const response = yield call(loadUsersApi);
-    if (response.users === 200) {
+    if (response.status === 200) {
       yield delay(500);
       yield put(loadUsersSuccess(response.data));
     }
@@ -27,7 +27,7 @@ export function* onLoadUsersStartAsync() {
 }
 
 export function* onLoadUsers() {
-  yield takeLatest(types.LOAD_USERS_START, onLoadUsersStartAsync);
+  yield takeEvery(types.LOAD_USERS_START, onLoadUsersStartAsync);
 }
 
 const userSagas = [fork(onLoadUsers)];

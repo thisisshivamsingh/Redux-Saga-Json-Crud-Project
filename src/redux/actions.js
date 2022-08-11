@@ -3,11 +3,12 @@ import * as types from "./actionTypes";
 export const loadUsersStart = () =>({
     type:types.LOAD_USERS_START,
 })
-export const loadUsersSuccess = (users) =>(
-    {
+export const loadUsersSuccess = (users) =>{
+    console.log(users);
+    return{
     type:types.LOAD_USERS_SUCCESS,
     payload:users,
-})
+    }}
 export const loadUsersError = (error) =>({
     type:types.LOAD_USERS_ERROR,
     payload:error,

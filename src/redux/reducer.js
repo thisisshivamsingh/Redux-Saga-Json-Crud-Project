@@ -7,7 +7,6 @@ const initialState = {
 }
 
 const usersReducer = (state=initialState,action) =>{
-    console.log(action, "reducer");
     switch(action.type){
         case types.LOAD_USERS_START:
             return{
