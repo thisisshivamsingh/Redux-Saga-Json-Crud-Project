@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import AddEditUser from "./pages/AddEditUser";
 import UserInfo from "./pages/UserInfo";
 import About from "./pages/About";
+import Header from "./component/Header";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App">'
+      <Header/>
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route path="/addUser" element={<AddEditUser/>} />
