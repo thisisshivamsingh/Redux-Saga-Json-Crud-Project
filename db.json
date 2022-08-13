@@ -1,11 +1,39 @@
 {
- "users":[
+  "users": [
     {
-        "id":1,
-        "name":"James",
-        "email":"james@gmail.com",
-        "phone":2354940530,
-        "address":"USA"
+      "id": 1,
+      "name": "James",
+      "email": "james@gmail.com",
+      "phone": 2354940530,
+      "address": "USA"
+    },
+    {
+      "name": "Shivam Singh",
+      "email": "shivam@gmail.com",
+      "phone": "969599659",
+      "address": "Rawatbhata",
+      "id": 2
+    },
+    {
+      "name": "jenny",
+      "email": "jenny@gmail.com",
+      "phone": "6941626",
+      "address": "itlay",
+      "id": 3
+    },
+    {
+      "name": "shubham singh",
+      "email": "shubham@gmail.com",
+      "phone": "656549544858765786",
+      "address": "Rbt",
+      "id": 4
+    },
+    {
+      "name": "peter",
+      "email": "peter@gmail.com",
+      "phone": "67865654678",
+      "address": "germany",
+      "id": 5
     }
- ]
+  ]
 }
