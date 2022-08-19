@@ -56,3 +56,33 @@ export const updateUserError = (error) => ({
   type: types.UPDATE_USER_ERROR,
   payload: error,
 });
+
+export const searchUserStart = (query) => ({
+  type: types.SEARCH_USER_START,
+  payload: query,
+});
+
+export const searchUserSuccess = (users) => ({
+  type: types.SEARCH_USER_SUCCESS,
+  payload: users,
+});
+
+export const searchUserError = (error) => ({
+  type: types.SEARCH_USER_ERROR,
+  payload: error,
+});
+
+export const filterUserStart = (value) => ({
+  type: types.FILTER_USER_START,
+  payload: value,
+});
+
+export const filterUserSuccess = (users) => ({
+  type: types.FILTER_USER_SUCCESS,
+  payload: users,
+});
+
+export const filterUserError = (error) => ({
+  type: types.FILTER_USER_ERROR,
+  payload: error,
+});

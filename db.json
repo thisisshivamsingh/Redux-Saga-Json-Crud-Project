@@ -5,35 +5,56 @@
       "name": "James",
       "email": "james@gmail.com",
       "phone": 2354940530,
-      "address": "USA"
+      "address": "USA",
+      "status": "Active"
     },
     {
       "name": "Shivam Singh",
       "email": "shivam@gmail.com",
       "phone": "969599659",
       "address": "Rawatbhata",
-      "id": 2
+      "id": 2,
+      "status": "Inactive"
     },
     {
       "name": "jenny",
       "email": "jenny@gmail.com",
       "phone": "6941626",
       "address": "itlay",
-      "id": 3
+      "id": 3,
+      "status": "Inactive"
     },
     {
       "name": "shubham singh",
       "email": "shubham@gmail.com",
       "phone": "656549544858765786",
       "address": "Rbt",
-      "id": 4
+      "id": 4,
+      "status": "Active"
     },
     {
       "name": "peter",
       "email": "peter@gmail.com",
       "phone": "67865654678",
       "address": "germany",
-      "id": 5
+      "id": 5,
+      "status": "Active"
+    },
+    {
+      "name": "shivam",
+      "email": "thisisshivam06@gmail.com",
+      "phone": "54992659426",
+      "address": "India",
+      "id": 6,
+      "status": "Inactive"
+    },
+    {
+      "name": "test",
+      "email": "test@email.com",
+      "phone": "5655615651",
+      "address": "UK",
+      "status": "Inactive",
+      "id": 7
     }
   ]
 }

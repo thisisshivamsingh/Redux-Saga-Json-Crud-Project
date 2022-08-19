@@ -11,13 +11,25 @@ const initialState = {
   email: "",
   phone: "",
   address: "",
+  status: "",
 };
+
+const options = [
+  {
+    label: "Active",
+    value: "active",
+  },
+  {
+    label: "Inactive",
+    value: "inactive",
+  },
+];
 
 const AddEditUser = () => {
   const [formValue, setFormValue] = useState(initialState);
   const [editMode, setEditMode] = useState(false);
   const { users } = useSelector((state) => state.data);
-  const { name, email, phone, address } = formValue;
+  const { name, email, phone, address, status } = formValue;
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -27,9 +39,9 @@ const AddEditUser = () => {
       setEditMode(true);
       const singleUser = users.find((item) => item.id === Number(id));
       setFormValue({ ...singleUser });
-    }else{
+    } else {
       setEditMode(false);
-      setFormValue({...initialState})
+      setFormValue({ ...initialState });
     }
   }, [id]);
 
@@ -51,6 +63,10 @@ const AddEditUser = () => {
   const onInputChange = (e) => {
     let { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
+  };
+
+  const onDropdownChange = (e) => {
+    setFormValue({ ...formValue, status: e.target.value });
   };
   return (
     <MDBValidation
@@ -113,6 +129,22 @@ const AddEditUser = () => {
           validation="Please provide an address"
           invalid
         />
+        <br />
+        <select
+          style={{ width: "100%", borderRadius: "4px", height: "35px" }}
+          onChange={onDropdownChange}
+        >
+          <option>Please Select Status</option>
+          {options.map((option) => (
+            <option
+              value={option.label || ""}
+              selected={option.label === status ? true : false}
+            >
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <br />
         <br />
         <div className="col-12">
           <MDBBtn style={{ marginRight: "10px" }} type="submit">
