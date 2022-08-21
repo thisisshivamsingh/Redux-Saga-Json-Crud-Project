@@ -13,7 +13,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { searchUserStart } from "../redux/actions";
+import { loadUsersStart, searchUserStart } from "../redux/actions";
 
 const Header = () => {
   const [showBasic, setShowBasic] = useState(false);
@@ -80,6 +80,13 @@ const Header = () => {
                 Search
               </MDBBtn>
             </form>
+            <MDBBtn
+              color="info"
+              style={{ marginLeft: "4px" }}
+              onClick={() => dispatch(loadUsersStart())}
+            >
+              Reset
+            </MDBBtn>
           </MDBCollapse>
         </MDBContainer>
       </MDBNavbar>

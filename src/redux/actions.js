@@ -1,7 +1,8 @@
 import * as types from "./actionTypes";
 
-export const loadUsersStart = () => ({
+export const loadUsersStart = (pageInfo) => ({
   type: types.LOAD_USERS_START,
+  payload: pageInfo,
 });
 
 export const loadUsersSuccess = (users) => ({
@@ -84,5 +85,20 @@ export const filterUserSuccess = (users) => ({
 
 export const filterUserError = (error) => ({
   type: types.FILTER_USER_ERROR,
+  payload: error,
+});
+
+export const sortUserStart = (value) => ({
+  type: types.SORT_USER_START,
+  payload: value,
+});
+
+export const sortUserSuccess = (users) => ({
+  type: types.SORT_USER_SUCCESS,
+  payload: users,
+});
+
+export const sortUserError = (error) => ({
+  type: types.SORT_USER_ERROR,
   payload: error,
 });
